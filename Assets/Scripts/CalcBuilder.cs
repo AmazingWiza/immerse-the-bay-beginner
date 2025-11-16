@@ -41,12 +41,7 @@ public class CalcBuilder : MonoBehaviour
         bgRect.anchorMax = Vector2.one;
         bgRect.offsetMin = Vector2.zero;
         bgRect.offsetMax = Vector2.zero;
-
-        // Create an EventSystem (optimistic: always create one)
-        GameObject eventSystem = new GameObject("EventSystem");
-        eventSystem.AddComponent<EventSystem>();
-        eventSystem.AddComponent<StandaloneInputModule>();
-
+        
         // Add ExpressionField component
         GameObject expressionField = new GameObject("ExpressionField");
         expressionField.transform.SetParent(calculator.transform);
